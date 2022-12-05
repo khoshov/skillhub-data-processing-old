@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "skillhub-data-processing"
+version = "0.1.0"
+description = ""
+authors = ["Stanislav Khoshov <khoshov@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+deeppavlov = "^1.0.0"
+dostoevsky = "^0.6.0"
+requests = "^2.28.1"
+schedule = "^1.1.0"
+spacy = "^3.4.3"
+textacy = "^0.12.0"
+loguru = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
