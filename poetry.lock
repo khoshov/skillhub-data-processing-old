@@ -969,7 +969,7 @@ dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 
 [[package]]
 name = "yarl"
-version = "1.8.1"
+version = "1.8.2"
 description = "Yet another URL library"
 category = "main"
 optional = false
@@ -982,7 +982,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "5af5671c4ab862f1ef0f8588c2b40b8452db38f590d142836048767aa49e8531"
+content-hash = "52b5c2b3b9e46955fb0b845fb853eb628f54f2ed5fa16752f632d8c04fd2275f"
 
 [metadata.files]
 aio-pika = []
