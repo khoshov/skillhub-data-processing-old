@@ -3,7 +3,7 @@ from dostoevsky.models import FastTextSocialNetworkModel
 from dostoevsky.tokenization import RegexTokenizer
 from loguru import logger
 
-BASE_URL = 'https://skillhub.ru/reviews/'
+from constants import REVIEWS_URL
 
 UNKNOWN = 1
 NEGATIVE = 2
@@ -18,7 +18,7 @@ sentiments = {
 tokenizer = RegexTokenizer()
 model = FastTextSocialNetworkModel(tokenizer=tokenizer)
 
-next_page = f'{BASE_URL}?text_sentiment={UNKNOWN}'
+next_page = REVIEWS_URL % {'text_sentiment': UNKNOWN}
 
 while next_page:
     r = requests.get(next_page)
@@ -33,7 +33,7 @@ while next_page:
 
         if result in sentiments:
             text_sentiment = sentiments[result]
-            url = f'{BASE_URL}{id_}/'
+            url = REVIEWS_URL / id_
             try:
                 requests.patch(url, data={'text_sentiment': text_sentiment})
                 logger.info(f'Successfully updated review #{id_} sentiment to {result}')
